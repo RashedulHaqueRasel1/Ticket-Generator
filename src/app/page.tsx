@@ -1,11 +1,19 @@
-import Form from "@/components/Form/Form";
-import Home from "@/components/Home/Home";
+"use client";
 
-export default function FristPage() {
+import React, { useState } from "react";
+import Home from "@/components/Home/Home";
+import TicketForm from "@/components/TicketForm/TicketForm";
+
+export default function FirstPage() {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    github: "",
+  });
+
   return (
-    <div>
+    <div className="min-h-screen">
       <Home />
-      <Form />
     </div>
   );
 }
