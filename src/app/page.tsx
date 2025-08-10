@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Home from "@/components/Home/Home";
+
+import Card from "@/components/Card/Card";
 import TicketForm from "@/components/TicketForm/TicketForm";
 
 export default function FirstPage() {
@@ -11,9 +13,11 @@ export default function FirstPage() {
     github: "",
   });
 
+
   return (
     <div className="min-h-screen">
       <Home />
+      <Card />
     </div>
   );
 }
