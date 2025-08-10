@@ -17,7 +17,7 @@ export default function TicketForm({ form, setForm }: Props) {
   const [error, setError] = useState<string | null>(null);
 
   const handleFile = (file: File) => {
-    
+
     if (!file.type.startsWith("image/")) {
       setError("Only JPG or PNG images are allowed.");
       return;
