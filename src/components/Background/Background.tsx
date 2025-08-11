@@ -3,7 +3,6 @@ import React from "react";
 export default function Background() {
   return (
     <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
- 
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -11,14 +10,13 @@ export default function Background() {
         }}
       />
 
- 
       <img
         src="/images/pattern-squiggly-line-top.svg"
         alt=""
         className="absolute top-16 right-0 w-xl h-xl pointer-events-none"
       />
 
- 
+      {/*  */}
       <img
         src="/images/pattern-squiggly-line-bottom-desktop.svg"
         alt=""
