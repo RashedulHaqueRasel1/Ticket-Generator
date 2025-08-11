@@ -3,6 +3,7 @@ import Background from "../Background/Background";
 import Header from "./Header/Header";
 import { useState } from "react";
 import TicketForm from "../TicketForm/TicketForm";
+import { Toaster, toast } from "sonner";
 
 type FormData = {
   fullName: string;
@@ -18,10 +19,9 @@ const Home = () => {
     fullName: "",
     email: "",
     github: "",
-    avatar: null, 
+    avatar: null,
   });
 
-  // Utility: Convert File → Base64
   const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -50,7 +50,12 @@ const Home = () => {
 
     localStorage.setItem("ticketForm", JSON.stringify(dataToSave));
 
-    console.log("Saved to localStorage:", dataToSave);
+    toast.success("My first toast");
+
+ 
+    setTimeout(() => {
+      router.push("/details");
+    }, 2000);
   };
 
   return (
@@ -83,6 +88,8 @@ const Home = () => {
           </form>
         </div>
       </main>
+
+      <Toaster position="top-center" />
     </div>
   );
 };
