@@ -17,7 +17,7 @@ export default function TicketForm({ form, setForm }: Props) {
   const [error, setError] = useState<string | null>(null);
 
   const handleFile = (file: File) => {
-    
+
     if (!file.type.startsWith("image/")) {
       setError("Only JPG or PNG images are allowed.");
       return;
@@ -46,7 +46,7 @@ export default function TicketForm({ form, setForm }: Props) {
       className="space-y-6 container mx-auto p-6 rounded-lg"
       onSubmit={(e) => e.preventDefault()}
     >
-      {/* Upload Avatar */}
+ 
       <div>
         <label className="block text-sm font-medium mb-2 text-white/80">
           Upload Avatar
@@ -87,7 +87,7 @@ export default function TicketForm({ form, setForm }: Props) {
         )}
       </div>
 
-      {/* Full Name */}
+  
       <div>
         <label className="text-sm block mb-2 text-white/80">Full Name</label>
         <input
@@ -99,7 +99,7 @@ export default function TicketForm({ form, setForm }: Props) {
         />
       </div>
 
-      {/* Email */}
+    
       <div>
         <label className="text-sm block mb-2 text-white/80">
           Email Address
@@ -114,7 +114,7 @@ export default function TicketForm({ form, setForm }: Props) {
         />
       </div>
 
-      {/* GitHub */}
+ 
       <div>
         <label className="text-sm block mb-2 text-white/80">
           GitHub Username
